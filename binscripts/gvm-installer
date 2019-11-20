@@ -43,11 +43,11 @@ EOF
 }
 
 BRANCH=${1:-master}
-GVM_DEST=${2:-$HOME}
+GVM_DEST=${2:-\$HOME}
 GVM_NAME="gvm"
 SRC_REPO=${SRC_REPO:-https://github.com/moovweb/gvm.git}
 
-[ "$GVM_DEST" = "$HOME" ] && GVM_NAME=".gvm"
+[ "$GVM_DEST" = "\$HOME" ] && GVM_NAME=".gvm"
 
 [ -d "$GVM_DEST/$GVM_NAME" ] && display_error \
     "Already installed! Remove old installation by running
